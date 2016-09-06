@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/laytpl.js"></script>
+    <script src="js/index.js"></script>
+    <script id="demo" type="text/html">
+    {{# for(var i = 0,len = d.length; i <len;i++){ }}
+
+
+    <div class="row">
+        <div class="tit">{{ d[i].tit }}</div>
+        <div class="list">
+        {{# for(var j = 0,len1 = d[i].list.length; j <len1;j++){ }}
+        <div class="block">
+            <img src="https://api.byi.pw/favicon/?url={{ d[i].list[j].url }}" />
+            <a href={{ d[i].list[j].url }} target="_blank" rel="noopener" >
+                {{ d[i].list[j].name }}
+            </a>
+        </div>
+        {{# } }}
+        </div>
+    </div>
+
+    {{# } }}
+    </script>
+
+
+    <div class="con">
+
+        <div class="head">
+            <img src="favicon.ico" alt="xizero.com">
+            <span>简单的网址索引</span>
+        </div>
+        <div id="view"></div>
+
+        <footer id="footer">
+            <a href="https://github.com/f12998765/SpeedDial"><img class="github" src="img/github.svg" alt=""></a>
+            @XiZero.com Since July 2016
+        </footer>
+    </div>
+</body>
+</html>
